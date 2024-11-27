@@ -1,0 +1,45 @@
+<header class="header">
+    <!-- Contenido del header -->
+    <div class="header__container">
+        <!-- Logo -->
+        <div class="header__logo">
+            @if (menuOpen === true){
+            <a href="/" class="header__logo-link" aria-label="Ir a la página principal">
+                <img src="./assets/logo/manifestLogoBlack.svg" alt="Logo Manifest" />
+            </a>
+            <button class="header__menu-button button-close" (click)="menuOpen = !menuOpen">
+                <img src="./assets/icons/close.svg" alt="Logo Manifest" />
+            </button>
+            } @else {
+            <a href="/" class="header__logo" aria-label="Ir a la página principal">
+                <img src="./assets/logo/manifestLogoWhite.svg" alt="Logo Manifest" />
+            </a>
+            <button class="header__menu-button button-burger" (click)="menuOpen = !menuOpen">
+                <img src="./assets/icons/burger.svg" alt="Logo Manifest" />
+            </button>
+            }
+        </div>
+
+        <!-- Nav -->
+        <!-- @if (menuOpen === true){ -->
+        <nav class="header__nav" aria-label="Menú principal">
+            <ul class="header__menu">
+                <li class="header__item">
+                    <a href="/" class="header__link active">Inicio</a>
+                </li>
+                <li class="header__item">
+                    <a href="/" class="header__link">Nosotros</a>
+                </li>
+                <li class="header__item">
+                    <a href="/" class="header__link">Viajes</a>
+                </li>
+                <li class="header__item">
+                    <a href="/" class="header__link">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- } -->
+    </div>
+</header>
+
+{{ menuOpen }}
