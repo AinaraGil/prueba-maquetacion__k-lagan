@@ -1,0 +1,46 @@
+.header__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+    div.header__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        & .header__menu-button {
+        background: transparent;
+        border: none;
+        outline: none;
+    
+            img {
+            width: 13.52px;
+            height: 13.52px;
+            }
+        }
+    
+    }
+    
+    ul.header__menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    
+        li a {
+            color: var(--primary-text-color); 
+            font-weight: 600;
+            text-decoration: none;
+
+            
+            &.active {
+                color: var(--primary-color); 
+                border-bottom: 2px solid var(--primary-color);
+            }
+        }
+
+
+    }
+}
