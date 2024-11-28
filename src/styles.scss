@@ -9,8 +9,29 @@
 
 
 body {
+    position: relative;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.5;
-    margin: 24px
+    margin: 0;
+        
+    a.primary-button, button.primary-button {
+        color: var(--secondary-text-color);
+        background: var(--primary-color);
+        border-radius: 8px;
+        padding: 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        transition: background 0.1s linear;
+
+
+        &:hover {
+            background:#6a2fc7;
+            transition: background 0.1s linear;
+        }
+    }
 }
+
+
