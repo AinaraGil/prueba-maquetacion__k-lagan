@@ -50,3 +50,50 @@ div.hero__content{
 
     
 }    
+
+
+@media (min-width: 768px) {
+
+
+    div.hero__content{
+        max-width: 1300px;
+        margin: 0 auto;
+        gap: 30px;
+        margin: 150px auto;
+        
+        
+        h1,h2,p {
+        }
+    
+        h1.hero__title {
+            font-size: 3.6rem;
+
+        }
+    
+        h2.hero__subtitle {
+            font-weight: 600;
+        }
+        
+        p.hero__description {
+        }
+    
+        div.hero__divider {
+          
+            div {
+               
+            }
+    
+            span.hero__divider-icon {
+               
+    
+                img {
+                }
+            }
+        }
+    
+        
+    }    
+    
+
+    
+}

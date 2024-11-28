@@ -1,0 +1,17 @@
+div.content {
+    section {
+        padding: 24px;
+
+    } 
+}
+
+
+@media (min-width: 768px) {
+    div.content {
+        section {
+            max-width: 1300px;
+            margin: 0 auto;
+        } 
+    }
+    
+}
