@@ -23,7 +23,9 @@ body {
         display: inline-flex;
         align-items: center;
         gap: 10px;
+        border: none;
         cursor: pointer;
+        outline: none;
         transition: background 0.1s linear;
 
 
@@ -32,6 +34,18 @@ body {
             transition: background 0.1s linear;
         }
     }
-}
 
+    h2.content__subtitle{
+        margin: 0;
+        color: var(--primary-color);
+    }
+    
+    p.content__description {
+        color: var(--primary-text-color);
+        font-size: 1em;
+        font-weight: 100;
+        margin: 10px 0 20px;
+    }
+    
+}
 

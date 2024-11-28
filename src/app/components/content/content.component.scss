@@ -1,7 +1,6 @@
 div.content {
     section {
-        padding: 24px;
-
+        padding:24px ;
     } 
 }
 
@@ -11,6 +10,13 @@ div.content {
         section {
             max-width: 1300px;
             margin: 0 auto;
+            padding: 60px 24px 80px;
+
+            &.content__places {
+                max-width: none;
+                margin: 0;
+                padding: 0;
+            }
         } 
     }
     
