@@ -1,6 +1,10 @@
 div.content {
     section {
         padding:24px ;
+
+        &.content__prices {
+            background: #EFF3FB;
+        }
     } 
 }
 
@@ -9,8 +13,8 @@ div.content {
     div.content {
         section {
             max-width: 1300px;
-            margin: 0 auto;
-            padding: 60px 24px 80px;
+            margin: 40px auto;
+            padding: 0 24px 80px;
             overflow-x: hidden;
 
             &.content__places {
@@ -19,6 +23,12 @@ div.content {
                 max-width: none;
                 margin: 0;
                 padding: 0;
+            }
+
+            &.content__prices {
+                margin: 0;
+                padding: 0;
+                max-width: none;
             }
 
             &.content__offers {
