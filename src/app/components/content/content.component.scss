@@ -11,10 +11,17 @@ div.content {
             max-width: 1300px;
             margin: 0 auto;
             padding: 60px 24px 80px;
+            overflow-x: hidden;
 
             &.content__places {
+                display: flex;
+                justify-content: center;
                 max-width: none;
                 margin: 0;
+                padding: 0;
+            }
+
+            &.content__offers {
                 padding: 0;
             }
         } 

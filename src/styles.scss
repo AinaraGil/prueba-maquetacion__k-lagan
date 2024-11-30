@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
     --primary-color: #8A42FB;
+    --secondary-color: #F3F3F3;
     --primary-text-color: #343434;
     --secondary-text-color: #FFFFFF;
 }
@@ -14,10 +15,13 @@ body {
     font-size: 1em;
     line-height: 1.5;
     margin: 0;
-        
-    a.primary-button, button.primary-button {
-        color: var(--secondary-text-color);
-        background: var(--primary-color);
+
+    h2{
+        font-size: 1.8em;
+    }
+    
+    a.primary-button, button.primary-button,
+    a.secondary-button, button.secondary-button {
         border-radius: 8px;
         padding: 16px;
         display: inline-flex;
@@ -27,25 +31,66 @@ body {
         cursor: pointer;
         outline: none;
         transition: background 0.1s linear;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1em;
+        font-weight: 100;
+    }
 
+    a.primary-button, button.primary-button {
+        color: var(--secondary-text-color);
+        background: var(--primary-color);
 
         &:hover {
-            background:#6a2fc7;
+            background:#5e17d1;
             transition: background 0.1s linear;
         }
     }
 
-    h2.content__subtitle{
-        margin: 0;
-        color: var(--primary-color);
-    }
-    
-    p.content__description {
+    a.secondary-button, button.secondary-button {
+        background:var(--secondary-color);
         color: var(--primary-text-color);
-        font-size: 1em;
-        font-weight: 100;
-        margin: 10px 0 20px;
+
+        &:hover {
+            background:#838383;
+            color: var(--secondary-text-color);
+        }
     }
-    
+
+    div.content__description {
+        max-width: 650px;
+        margin: 10px auto 40px;
+
+
+        h2.description__subtitle{
+            margin: 0;
+            color: var(--primary-color);
+        }
+        
+        p.description__text {
+            color: var(--primary-text-color);
+            font-size: 1em;
+            font-weight: 100;
+            margin: 10px 0 20px;
+        }
+    }
 }
 
+@media (min-width: 768px) {
+
+
+body {  
+
+        div.content__description {
+            margin: 10px auto 30px;
+
+            h2.description__subtitle,
+            p.description__text {
+                text-align: center;
+            }
+
+            h2.description__subtitle{
+                font-size: 2.1em;
+            }
+        }
+    }
+}

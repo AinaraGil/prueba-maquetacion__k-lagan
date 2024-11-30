@@ -1,15 +1,17 @@
-
-
 div.content__destinations-images {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 25px;
 
     div.image-container1,
     div.image-container2{
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 25px;
+
+        img {
+            width: 100%;
+        }
     }
 
     div.image-container3{
@@ -18,40 +20,33 @@ div.content__destinations-images {
 
     img {
         display: block;
-        width: 100%;
-        border-radius: 10px;
         object-fit: cover;
-        height: 288px;
-        max-height: 288px;
+        border-radius: 10px;
+        height: 290px;
+        max-height: 290px;
     }
 }
 
 
 @media (min-width: 768px) {
-    h2.content__subtitle,
-    p.content__description {
-        margin: 10px auto 20px;
-        text-align: center;
-        max-width: 650px;
-    }
-
-    h2.content__subtitle {
-        font-size: 2.1em;
-    }
-
     div.content__destinations-images {
 
         div.image-container2{
             flex-direction: row;
+            
+            img {
+                width: calc(50% - 12.5px);
+            }
         }
 
         div.image-container3{
-            gap: 16px;
+            gap: 25px;
             display: flex;
             flex-direction: row;
 
+            img {
+                width: calc(33% - 12.5px);
+            }
         }
-
     }
-    
 }
