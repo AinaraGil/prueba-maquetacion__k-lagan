@@ -3,6 +3,10 @@ div.prices__container {
     div.table__wrapper{
         overflow-x: auto;
 
+        table{
+            background-color: transparent;
+        }
+
 
     table.prices__table {
             width: 100%;
@@ -34,13 +38,13 @@ div.prices__container {
     .mat-column-pro,
     .mat-column-enterprise {
         font-family: 'Plus Jakarta Sans', sans-serif; 
+        border-bottom: 1px solid var(--tertiary-color);
     }
 
     .mat-column-feature,
     .mat-column-basic,
     .mat-column-pro {
         border-right: 1px solid var(--tertiary-color);
-        
     }
 
     .mat-column-basic,
@@ -51,8 +55,9 @@ div.prices__container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 5px;
+        gap: 15px;
         margin: 25px 0;
+        
 
             p.price__title, 
             p.price__number {           

@@ -1,0 +1,54 @@
+<div class="content__description">
+    <h2 class="description__subtitle">Contáctanos</h2>
+    <p class="description__text">
+        ¡Contáctanos! Estamos aquí para ayudarte con cualquier consulta que tengas. No dudes en escribirnos y te
+        responderemos lo más pronto posible.
+    </p>
+</div>
+
+<div class="content__form">
+    <div class="content__form-img">
+        <img
+            class="content__form-img-contact"
+            src="./assets/beach/img-contact.jpg"
+            alt="Persona sentada frente a una computadora portátil, en una mesa de madera con objetos decorativos como vasos y plantas."
+        />
+    </div>
+    <div class="content__form-container">
+        <form class="content__form-main" action="#">
+            <div class="content__group content__group--name">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" placeholder="Nombre" required />
+            </div>
+            <div class="content__group content__group--lastname">
+                <label for="lastname">Apellidos</label>
+                <input type="text" name="lastname" placeholder="Apellidos" required />
+            </div>
+            <div class="content__group content__group--email">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="content__group content__group--message">
+                <label for="message">Mensaje</label>
+                <textarea name="message" placeholder="Mensaje" required></textarea>
+            </div>
+            <div class="content__group content__group--conditions">
+                <div class="content__checkbox">
+                    <input type="checkbox" name="terms" required />
+                    <label for="terms"
+                        >Acepto los
+                        <a href="" target="_blank">términos y condiciones</a>
+                    </label>
+                </div>
+                <div class="content__button">
+                    <button class="primary-button" type="submit">
+                        <span>
+                            <img src="./assets/icons/message.svg" alt="Enviar mensaje" />
+                        </span>
+                        Enviar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
