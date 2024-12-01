@@ -1,0 +1,122 @@
+div.prices__container {
+
+    div.table__wrapper{
+        overflow-x: auto;
+
+        table{
+            background-color: transparent;
+        }
+
+
+    table.prices__table {
+            width: 100%;
+        }
+    
+    div.price__icon {
+        display: flex;
+        justify-content: center;
+    }
+    
+    td {
+        min-width: 150px;
+        border-bottom: 1px solid var(--tertiary-color);
+    }
+
+    .mat-column-feature td p {
+        margin: 10px 0;
+    }
+
+    .mat-column-feature {
+        p {
+            font-size: 1.4em;
+        }
+    }
+
+
+    .mat-column-feature,
+    .mat-column-basic,
+    .mat-column-pro,
+    .mat-column-enterprise {
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        border-bottom: 1px solid var(--tertiary-color);
+    }
+
+    .mat-column-feature,
+    .mat-column-basic,
+    .mat-column-pro {
+        border-right: 1px solid var(--tertiary-color);
+    }
+
+    .mat-column-basic,
+    .mat-column-pro,
+    .mat-column-enterprise {
+
+       div.price__th {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 25px 0;
+        
+
+            p.price__title, 
+            p.price__number {           
+                margin: 0;
+                font-weight: 700;
+            }
+
+            p.price__title {
+                font-size: 1.3em;
+            }
+
+            p.price__number {
+                font-size: 2em;
+                font-weight: 700;
+            }
+
+            button {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding: 8px;
+                text-wrap: nowrap;
+                font-size: 1.2em;
+            }
+       }
+
+       
+    }
+    
+    .mat-column-pro {
+        div.price__th {
+            p.price__title, p.price__number {
+                color: var(--primary-color);
+            }
+
+        }
+    }
+    
+    }  
+    
+}
+
+
+@media (min-width: 768px) { 
+    div.prices__container {
+        max-width: 1300px;
+        // width: 1300px;
+        margin: 0 auto;
+        padding: 60px 24px 80px;    
+        
+        .mat-column-basic,
+        .mat-column-pro,
+        .mat-column-enterprise {
+    
+           div.price__th { 
+                button {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,128 @@
+div.content__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin-top: 60px;
+
+    div.content__form-img {
+        width: 100%;
+        img.content__form-img-contact {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            height: auto;
+            max-height: 290px;
+        }
+    }
+   
+
+        div.content__form-container {
+
+            form.content__form-main {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+
+                div.content__group {
+                    flex: 0 100%;
+                    display: flex;
+                    flex-direction: column;
+            
+                    &.content__group--conditions {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        div.content__checkbox{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+                    }
+
+                    label {
+                        font-family: 'Open Sans', sans-serif;
+                    }
+
+                    a {
+                        color: var(--primary-color);
+
+                        &:hover {
+                            color: #926ccf;
+                        }
+                    }
+
+                    input, textarea {
+                        padding: 18px;
+                        background: #254E7E17;
+                        border-radius: 6px;
+                        border: none;
+
+                        &:focus-visible {
+                            outline: 2px solid #d1bcf3;
+                        }   
+
+                        &::placeholder {
+                            font-family: 'Open Sans', sans-serif;
+                        }
+                    }
+
+                    textarea {
+                        min-height: 70px;
+                    }
+
+                    input[type="checkbox"] {
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                        outline: none;
+    
+                    }
+                }
+            
+            }      
+        
+        }
+    
+}
+
+
+
+@media (min-width: 768px) {
+    img.content__form-img-contact {
+        border-radius: 20px;
+        max-height: 600px !important;
+    }
+
+    div.content__form {
+        display: flex;
+        flex-direction: row;
+
+        div.content__form-img,
+        div.content__form-container {
+            flex: 0 50%;
+        }
+
+
+        div.content__group--name,
+        div.content__group--lastname,
+        div.content__conditions{
+          flex: 1 !important;
+        }
+
+        div.content__group--email,
+        div.content__group--message {
+            flex: 0 100%;
+        }
+
+        div.content__group--conditions {
+            display: flex;
+            flex-direction: row !important;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
