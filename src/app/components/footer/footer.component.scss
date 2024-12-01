@@ -1,0 +1,16 @@
+div.footer__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding: 60px auto;
+
+    p {
+        color: var(--secondary-text-color);
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
