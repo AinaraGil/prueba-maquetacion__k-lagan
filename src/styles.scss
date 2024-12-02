@@ -24,6 +24,10 @@ body {
         font-size: 1.8em;
     }
     
+    a, button {
+        cursor: pointer;
+    }
+
     a.primary-button, button.primary-button,
     a.secondary-button, button.secondary-button,
     a.tertiary-button, button.tertiary-button  {
@@ -33,12 +37,14 @@ body {
         align-items: center;
         gap: 10px;
         border: none;
-        cursor: pointer;
+
         outline: none;
         transition: background 0.1s linear;
         font-family: 'Open Sans', sans-serif;
         font-size: 1em;
         font-weight: 100;
+        // display: inline-block;
+        transition: transform 0.2s ease, font-size 0.2s ease;
     }
 
     a.primary-button, button.primary-button {
@@ -48,6 +54,7 @@ body {
         &:hover {
             background:#5e17d1;
             transition: background 0.1s linear;
+            transform: scale(1.1);
         }
     }
 
@@ -59,6 +66,7 @@ body {
             background:#838383;
             color: var(--secondary-text-color);
             transition: background 0.1s linear;
+            transform: scale(1.1);
         }
     }
 
@@ -70,6 +78,7 @@ body {
         &:hover {
             background:#CDCDCD;
             transition: background 0.1s linear;
+            transform: scale(1.1);
         }
     }
 
