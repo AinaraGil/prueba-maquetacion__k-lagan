@@ -1,0 +1,40 @@
+div.content {
+    section {
+        padding:24px ;
+
+        &.content__prices {
+            background: #EFF3FB;
+        }
+    } 
+}
+
+
+@media (min-width: 768px) {
+    div.content {
+        section {
+            max-width: 1300px;
+            margin: 40px auto;
+            padding: 0 24px 80px;
+            overflow-x: hidden;
+
+            &.content__places {
+                display: flex;
+                justify-content: center;
+                max-width: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            &.content__prices {
+                margin: 0;
+                padding: 0;
+                max-width: none;
+            }
+
+            &.content__offers {
+                padding: 0;
+            }
+        } 
+    }
+    
+}

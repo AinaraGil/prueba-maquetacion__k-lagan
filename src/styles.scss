@@ -1,0 +1,143 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #8A42FB;
+    --secondary-color: #F3F3F3;
+    --tertiary-color: #CDCDCD;
+    --primary-text-color: #343434;
+    --secondary-text-color: #FFFFFF;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+
+// html, body { height: 100%; }
+
+body {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    margin: 0;
+
+    h2{
+        font-size: 1.8em;
+    }
+    
+    a, button {
+        cursor: pointer;
+    }
+
+    a.primary-button, button.primary-button,
+    a.secondary-button, button.secondary-button,
+    a.tertiary-button, button.tertiary-button  {
+        border-radius: 8px;
+        padding: 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: none;
+
+        outline: none;
+        transition: background 0.1s linear;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1em;
+        font-weight: 100;
+        // display: inline-block;
+        transition: transform 0.2s ease, font-size 0.2s ease;
+    }
+
+    a.primary-button, button.primary-button {
+        color: var(--secondary-text-color);
+        background: var(--primary-color);
+
+        &:hover {
+            background:#5e17d1;
+            transition: background 0.1s linear;
+            transform: scale(1.1);
+        }
+    }
+
+    a.secondary-button, button.secondary-button {
+        background:var(--secondary-color);
+        color: var(--primary-text-color);
+
+        &:hover {
+            background:#838383;
+            color: var(--secondary-text-color);
+            transition: background 0.1s linear;
+            transform: scale(1.1);
+        }
+    }
+
+    a.tertiary-button, button.tertiary-button {
+        border: 2px solid var(--tertiary-color);
+        background: transparent;
+        color: var(--primary-text-color);
+
+        &:hover {
+            background:#CDCDCD;
+            transition: background 0.1s linear;
+            transform: scale(1.1);
+        }
+    }
+
+    div.content__description {
+        max-width: 650px;
+        margin: 10px auto 40px;
+
+
+        h2.description__subtitle{
+            margin: 0;
+            color: var(--primary-color);
+        }
+        
+        p.description__text {
+            color: var(--primary-text-color);
+            font-size: 1em;
+            font-weight: 100;
+            margin: 10px 0 20px;
+        }
+    }
+
+    div.divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+
+        div {
+            width: 100%;
+            border-top: 1px solid var(--secondary-text-color);
+        }
+
+        span.divider__icon {
+            display: flex;
+
+            img {
+                width: 24px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+
+body {  
+
+        div.content__description {
+            margin: 10px auto 30px;
+
+            h2.description__subtitle,
+            p.description__text {
+                text-align: center;
+            }
+
+            h2.description__subtitle{
+                font-size: 2.1em;
+            }
+        }
+    }
+}

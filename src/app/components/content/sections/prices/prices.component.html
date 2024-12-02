@@ -1,0 +1,104 @@
+<div class="prices__container">
+    <div class="content__description">
+        <h2 class="description__subtitle">Flexible pricing for everyone</h2>
+        <p class="description__text">Choose the best plan for your needs</p>
+    </div>
+    <div class="table__wrapper">
+        <table mat-table [dataSource]="dataSource" class="prices__table" aria-label="Tabla de precios de planes">
+            <!-- Feature Column -->
+            <ng-container matColumnDef="feature">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element">
+                    <p>{{ element.feature }}</p>
+                </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="basic">
+                <th mat-header-cell *matHeaderCellDef scope="col">
+                    <div class="price__th">
+                        <p class="price__title">Basic</p>
+                        <p class="price__number">$9.99</p>
+                        <button class="tertiary-button" aria-label="Seleccionar el plan Basic">Select</button>
+                    </div>
+                </th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="price__icon">
+                        @if (element.basic === true){
+                        <img
+                            class="place__img"
+                            src="assets/icons/check.svg"
+                            alt="Icono de check, indica que está incluido"
+                        />
+                        } @else {
+                        <img
+                            class="place__img"
+                            src="assets/icons/close.svg"
+                            alt="Icono de cruz, indica que no está incluido"
+                        />
+                        }
+                    </div>
+                </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="pro">
+                <th mat-header-cell *matHeaderCellDef scope="col">
+                    <div class="price__th">
+                        <p class="price__title">Pro</p>
+                        <p class="price__number">$19.99</p>
+                        <button class="primary-button" aria-label="Iniciar con el plan Plus">Start with Plus</button>
+                    </div>
+                </th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="price__icon">
+                        @if (element.pro === true){
+                        <img
+                            class="place__img"
+                            src="assets/icons/check.svg"
+                            alt="icono de check, que hace referecia a incluye"
+                        />
+                        } @else {
+                        <img
+                            class="place__img"
+                            src="assets/icons/close.svg"
+                            alt="icono de cruz, que hace referecia a no incluye"
+                        />
+                        }
+                    </div>
+                </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="enterprise">
+                <th mat-header-cell *matHeaderCellDef scope="col">
+                    <div class="price__th">
+                        <p class="price__title">Enterprise</p>
+                        <p class="price__number">$29.99</p>
+                        <button class="tertiary-button" aria-label="Seleccionar el plan Basic">Select</button>
+                    </div>
+                </th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="price__icon">
+                        @if (element.enterprise === true){
+                        <img
+                            class="place__img"
+                            src="assets/icons/check.svg"
+                            alt="icono de check, que hace referecia a incluye"
+                        />
+                        } @else {
+                        <img
+                            class="place__img"
+                            src="assets/icons/close.svg"
+                            alt="icono de cruz, que hace referecia a no incluye"
+                        />
+                        }
+                    </div>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+    </div>
+</div>
