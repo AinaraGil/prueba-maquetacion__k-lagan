@@ -3,14 +3,141 @@ div.footer__container {
     margin: 0 auto;
     overflow-x: hidden;
     padding: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
     p {
         color: var(--secondary-text-color);
     }
 
-    ul {
+    
+    div.footer__description,
+    div.footer__links {
+        flex: 0 100%;
+    }
+
+    div.footer__description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            height: 30px;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    ul.footer__links--list {
         list-style: none;
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        li.list__item {
+            flex: 0 100%;
+
+            a {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                color: var(--secondary-text-color);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
+
+    div.footer__socialmedia {
+        flex: 0 100%;
+        display: flex;
+        flex-direction: column;
+
+        div.socialmedia__links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    div.footer__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        div.footer__description,
+        div.footer__links {
+            flex: 1;
+        }
+
+        div.footer__description {
+            align-items: flex-start;
+
+            img {
+                height: auto;
+            }
+
+            p {
+                text-align: start;
+            }
+        }
+
+        div.footer__links {
+            margin-left: 40px;
+
+            ul.footer__links--list {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 5px;
+    
+                li.list__item {
+                    flex: 0 32.3%;
+
+                    a {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 10px;
+                        color: var(--secondary-text-color);
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+    
+        }
+
+        div.footer__socialmedia {
+            flex: 0 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            div.socialmedia__links {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    }
+
+
+
 }
