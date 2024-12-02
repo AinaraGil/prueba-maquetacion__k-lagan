@@ -2,7 +2,7 @@
 
 Este proyecto es una prueba técnica de maquetación basada en un diseño proporcionado en Figma. Su objetivo es evaluar la capacidad de transformar un diseño en código estructurado, semántico y accesible, utilizando tecnologías modernas.
 
-## 📋 Requisitos y Alcance
+## 📋 Estructura y Contenido
 
 ### Elementos Implementados
 
@@ -60,4 +60,4 @@ Este proyecto es una prueba técnica de maquetación basada en un diseño propor
 ## 🧑‍💻 Autor
 
 Desarrollado por Ainara Gil como parte de la prueba técnica para K-LAGAN.  
-[LinkedIn](https://www.linkedin.com/in/ainaragil) | [Portafolio](#) | [Github](#)
+[LinkedIn](https://www.linkedin.com/in/ainaragil) | [Portafolio](https://ainaragilcm.myportfolio.com/work) | [Github](https://github.com/AinaraGil)
