@@ -80,7 +80,8 @@ div.prices__container {
                 justify-content: center;
                 padding: 8px;
                 text-wrap: nowrap;
-                font-size: 1.2em;
+                font-size: 1.1em;
+                transition: transform 0.2s ease, font-size 0.2s ease;
             }
        }
 

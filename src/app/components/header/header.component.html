@@ -1,27 +1,30 @@
-<header class="header">
+<!-- MOBILE -->
+<header class="header header__mobile">
     <!-- Contenido del header -->
     <div class="header__container">
         <!-- Logo -->
         <div class="header__logo">
-            @if (menuOpen === true){
+            <a href="/" class="header__logo--link" aria-label="Ir a la página principal">
+                <img src="./assets/logo/manifestLogoWhite.svg" alt="Logo Manifest" />
+            </a>
+            <button class="header__menu-button button-burger" (click)="menuOpen = true" aria-label="Abrir menú">
+                <img src="./assets/icons/burger.svg" alt="Abrir menú" />
+            </button>
+        </div>
+    </div>
+
+    <!-- Cuando el menu se abre, la vista del menu obtiene la clase 'open' que hace que el margin cambie a 0, y asi aparece el menu desde la izquierda -->
+    <div class="header__mobile--nav" [class.open]="menuOpen">
+        <div class="header__logo">
             <a href="/" class="header__logo-link" aria-label="Ir a la página principal">
                 <img src="./assets/logo/manifestLogoBlack.svg" alt="Logo Manifest" />
             </a>
-            <button class="header__menu-button button-close" (click)="menuOpen = !menuOpen">
-                <img src="./assets/icons/close.svg" alt="Logo Manifest" />
+            <button class="header__menu-button button-close" (click)="menuOpen = false" aria-label="Cerrar menú">
+                <img src="./assets/icons/close.svg" alt="Cerrar menú" />
             </button>
-            } @else {
-            <a href="/" class="header__logo" aria-label="Ir a la página principal">
-                <img src="./assets/logo/manifestLogoWhite.svg" alt="Logo Manifest" />
-            </a>
-            <button class="header__menu-button button-burger" (click)="menuOpen = !menuOpen">
-                <img src="./assets/icons/burger.svg" alt="Logo Manifest" />
-            </button>
-            }
         </div>
 
         <!-- Nav -->
-        @if (menuOpen === true){
         <nav class="header__nav" aria-label="Menú principal">
             <ul class="header__menu">
                 <li class="header__item">
@@ -38,6 +41,36 @@
                 </li>
             </ul>
         </nav>
-        }
+    </div>
+</header>
+
+<!-- DESKTOP -->
+<header class="header header__desktop">
+    <!-- Contenido del header -->
+    <div class="header__container">
+        <!-- Logo -->
+        <div class="header__logo">
+            <a href="/" class="header__logo--link" aria-label="Ir a la página principal">
+                <img src="./assets/logo/manifestLogoWhite.svg" alt="Logo Manifest" />
+            </a>
+        </div>
+
+        <!-- Nav -->
+        <nav class="header__nav" aria-label="Menú principal">
+            <ul class="header__menu">
+                <li class="header__item">
+                    <a href="/" class="header__link active">Inicio</a>
+                </li>
+                <li class="header__item">
+                    <a href="/" class="header__link">Nosotros</a>
+                </li>
+                <li class="header__item">
+                    <a href="/" class="header__link">Viajes</a>
+                </li>
+                <li class="header__item">
+                    <a href="/" class="header__link">Contacto</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </header>

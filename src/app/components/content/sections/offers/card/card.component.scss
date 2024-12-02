@@ -133,10 +133,36 @@ div.card {
 
     div.card {
         div.card__image {
-                img.img__beach {
-                    height: 220px;
-                    max-height: 220px;
+            img.img__beach {
+                height: 220px;
+                max-height: 220px;
+            }
+        }
+    
+
+
+        div.card__content {
+            gap: 15px;
+
+            div.card__dates {
+                p {
+                    font-size: 0.9em !important;
+                }
+            }
+    
+            div.card__content-description {
+                h3.card__content-title {
+                    font-size: 1.4em !important;
+                }
+        
+            }
+    
+            div.card__content-prices {
+                p.price {
+                    font-size: 1.5em !important;
                 }
             }
         }
+    }
+
 }
